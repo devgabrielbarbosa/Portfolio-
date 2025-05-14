@@ -1,0 +1,178 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+form {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+input, textarea, button {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Estilos para os projetos */
+.projeto-admin {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.projeto-admin:hover {
+  transform: scale(1.03);
+}
+
+.projeto-admin h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+.projeto-admin p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.projeto-admin a {
+  color: #007bff;
+  text-decoration: none;
+  font-size: 1.1rem;
+}
+
+.projeto-admin a:hover {
+  text-decoration: underline;
+}
+
+.projeto-admin button {
+  background-color: #f0ad4e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+.projeto-admin button:hover {
+  background-color: #ec971f;
+}
+
+/* Layout Responsivo para a tela pequena */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+
+  form {
+    padding: 15px;
+    max-width: 100%;
+  }
+
+  .projeto-admin {
+    padding: 15px;
+  }
+
+  .projeto-admin h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .projeto-admin p {
+    font-size: 1rem;
+    margin-bottom: 8px;
+  }
+
+  .projeto-admin a {
+    font-size: 1rem;
+  }
+
+  .projeto-admin button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 5px;
+  }
+
+  form {
+    padding: 10px;
+  }
+
+  .projeto-admin {
+    padding: 12px;
+    margin: 10px 0;
+  }
+
+  .projeto-admin h3 {
+    font-size: 1.1rem;
+  }
+
+  .projeto-admin p {
+    font-size: 0.95rem;
+  }
+
+  .projeto-admin a {
+    font-size: 0.95rem;
+  }
+
+  .projeto-admin button {
+    font-size: 0.9rem;
+    padding: 6px 12px;
+  }
+  .editar-btn {
+    background-color: #5bc0de;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1rem;
+    border-radius: 6px;
+    margin-top: 10px;
+  }
+}

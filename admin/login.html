@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Login Admin">
+  <meta name="keywords" content="admin, login, projeto">
+  <meta name="author" content="Seu Nome">
+  <link rel="icon" href="/admin/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="/admin/style.css">
+  <title>Login Admin</title>
+</head>
+<body>
+<div>
+<h2>Adicionar Projeto</h2>
+  <form id="form-projeto">
+    <input type="text" id="titulo" placeholder="Título" required>
+    <textarea id="descricao" placeholder="Descrição" required></textarea>
+    <input type="url" id="link" placeholder="Link (opcional)">
+    <button type="submit">Adicionar</button>
+  </form>
+  <p id="mensagem"></p>
+</div>
+<div id="admin-projetos"></div>
+  
+  <script type="module" src="../admin/script.js"></script>
+  <script type="module" src="../firebase/firebase-config.js"></script>
+</body>
+</html>

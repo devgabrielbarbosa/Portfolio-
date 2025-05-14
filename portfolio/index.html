@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Portfólio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>GABRIEL LEMOS - DESENVOLVEDOR FRONT-END</h1>
+    <nav>
+      <a href="#sobre">Sobre</a>
+      <a href="#projetos">Projetos</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <section id="sobre">
+    <h2>Sobre Mim</h2>
+    <p>
+        Olá! Me chamo [Seu Nome] e estou em transição de carreira para a área de tecnologia, com foco em desenvolvimento web. Atualmente estudo HTML, CSS, JavaScript e React, com o objetivo de conquistar minha primeira oportunidade como desenvolvedor júnior.
+    </p>
+    <p>
+        Tenho experiência prática em projetos como sistemas de gestão e sites completos, por exemplo, um sistema de pedidos para uma padaria com painel administrativo e funcionalidades como carrinho, integração com WhatsApp e banco de dados no Firebase.
+    </p>
+    <p>
+        Além disso, já participei de um projeto integrador no SENAC Araguaína, onde desenvolvemos um site para melhorar os processos de uma academia, incluindo matrícula, gestão de equipamentos e engajamento de alunos.
+    </p>
+    <p>
+        Sou comprometido, curioso e gosto de aprender resolvendo problemas reais. Atualmente estudo à noite, após o trabalho, e estou sempre buscando melhorar minhas habilidades técnicas e de design. 
+    </p>
+    <p>
+        Estou disponível para freelas, parcerias ou oportunidades profissionais.
+    </p>
+  </section>
+
+ <section id="portfolio">
+  <h2>Meus Projetos</h2>
+  <div id="projetos-portfolio"></div>
+</section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <form id="form-contato">
+      <input type="text" name="nome" placeholder="Seu nome" required>
+      <input type="email" name="email" placeholder="Seu e-mail" required>
+      <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="mensagem-enviada"></p>
+  </section>
+
+  <script type="module" src="../firebase/firebase-config.js"></script>
+  <script type="module" src="./portfolio.js"></script>
+</body>
+</html>
