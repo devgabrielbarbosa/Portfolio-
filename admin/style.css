@@ -1,178 +1,233 @@
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background-color: #f8f8f8;
+h2{
+  font-size: 2.5rem;
   color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-align: center;
 }
 
+/* Body com fonte e cor suave */
+body {
+  font-family: 'Inter', sans-serif;
+  background: #f0f2f5;
+  color: #444;
+  line-height: 1.6;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Formulário */
 form {
   width: 100%;
   max-width: 600px;
-  margin: 0 auto 30px;
-  padding: 20px;
-  background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto 40px;
+  padding: 25px 30px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: box-shadow 0.3s ease;
 }
 
-input, textarea, button {
+form:hover, form:focus-within {
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Inputs, textarea e botões */
+input, textarea {
   width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  border: 1px solid #ddd;
-  border-radius: 6px;
+  padding: 14px 16px;
+  margin: 12px 0;
+  border: 1.8px solid #ccc;
+  border-radius: 10px;
   font-size: 1rem;
-  transition: border-color 0.3s;
-}
-
-input:focus, textarea:focus {
-  border-color: #007bff;
-  outline: none;
-}
-
-button {
-  background-color: #007bff;
-  color: white;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-button:hover {
-  background-color: #0056b3;
-}
-
-/* Estilos para os projetos */
-.projeto-admin {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  padding: 20px;
-  margin: 15px 0;
-  border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.projeto-admin:hover {
-  transform: scale(1.03);
-}
-
-.projeto-admin h3 {
-  font-size: 1.5rem;
-  margin-bottom: 12px;
+  font-weight: 500;
+  transition: border-color 0.3s ease;
+  resize: vertical;
+  font-family: inherit;
   color: #333;
 }
 
+input:focus, textarea:focus {
+  border-color: #2563eb;
+  outline: none;
+  box-shadow: 0 0 8px rgba(37, 99, 235, 0.3);
+}
+
+/* Botão principal */
+button {
+  width: 100%;
+  padding: 15px;
+  margin-top: 18px;
+  background: #2563eb;
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.4);
+  transition: background-color 0.35s ease, box-shadow 0.35s ease;
+  font-family: inherit;
+}
+
+button:hover {
+  background-color: #1e40af;
+  box-shadow: 0 6px 22px rgba(30, 64, 175, 0.5);
+}
+
+/* Contêiner dos projetos no admin */
+#admin-projetos {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 10px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 24px;
+  background: transparent;
+}
+
+/* Cartão do projeto */
+.projeto-admin {
+  background: #fff;
+  border-radius: 14px;
+  padding: 22px 24px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.07);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.projeto-admin:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+}
+
+/* Título */
+.projeto-admin h3 {
+  font-size: 1.6rem;
+  color: #222;
+  margin-bottom: 14px;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+/* Descrição */
 .projeto-admin p {
   font-size: 1.1rem;
   color: #555;
-  margin-bottom: 10px;
+  margin-bottom: 18px;
+  flex-grow: 1;
+  min-height: 80px;
+  line-height: 1.4;
 }
 
+/* Link do projeto */
 .projeto-admin a {
-  color: #007bff;
-  text-decoration: none;
   font-size: 1.1rem;
+  color: #2563eb;
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+  word-break: break-word;
 }
 
 .projeto-admin a:hover {
   text-decoration: underline;
+  color: #1e40af;
 }
 
+/* Botões */
 .projeto-admin button {
-  background-color: #f0ad4e;
-  color: white;
+  background-color: #f59e0b;
+  color: #fff;
   border: none;
-  padding: 10px 20px;
+  padding: 12px 24px;
   cursor: pointer;
   font-size: 1rem;
-  border-radius: 6px;
-  margin-top: 10px;
+  border-radius: 10px;
+  font-weight: 600;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  align-self: center;
+  min-width: 140px;
+  box-shadow: 0 4px 12px rgba(245, 158, 11, 0.4);
 }
 
 .projeto-admin button:hover {
-  background-color: #ec971f;
+  background-color: #b45309;
+  box-shadow: 0 6px 18px rgba(180, 83, 9, 0.6);
 }
 
-/* Layout Responsivo para a tela pequena */
+/* Botão editar especial */
+.editar-btn {
+  background-color: #3b82f6;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 10px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  min-width: 140px;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.4);
+}
+
+.editar-btn:hover {
+  background-color: #1e40af;
+  box-shadow: 0 6px 18px rgba(30, 64, 175, 0.6);
+}
+
+/* Responsividade */
+
+/* Tablets e telas médias */
 @media (max-width: 768px) {
   body {
-    padding: 10px;
+    padding: 15px;
   }
 
   form {
-    padding: 15px;
+    padding: 20px;
     max-width: 100%;
   }
 
-  .projeto-admin {
-    padding: 15px;
-  }
-
-  .projeto-admin h3 {
-    font-size: 1.2rem;
-    margin-bottom: 10px;
-  }
-
   .projeto-admin p {
-    font-size: 1rem;
-    margin-bottom: 8px;
-  }
-
-  .projeto-admin a {
-    font-size: 1rem;
-  }
-
-  .projeto-admin button {
-    font-size: 1rem;
-    padding: 8px 16px;
+    min-height: auto;
   }
 }
 
+/* Celulares */
 @media (max-width: 480px) {
   body {
-    padding: 5px;
-  }
-
-  form {
     padding: 10px;
   }
 
-  .projeto-admin {
-    padding: 12px;
-    margin: 10px 0;
+  form {
+    padding: 15px 20px;
   }
 
   .projeto-admin h3 {
-    font-size: 1.1rem;
+    font-size: 1.3rem;
   }
 
   .projeto-admin p {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
   .projeto-admin a {
-    font-size: 0.95rem;
+    font-size: 1rem;
   }
 
-  .projeto-admin button {
-    font-size: 0.9rem;
-    padding: 6px 12px;
-  }
+  .projeto-admin button,
   .editar-btn {
-    background-color: #5bc0de;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    cursor: pointer;
-    font-size: 1rem;
-    border-radius: 6px;
-    margin-top: 10px;
+    padding: 10px 18px;
+    font-size: 0.95rem;
+    min-width: 120px;
   }
 }

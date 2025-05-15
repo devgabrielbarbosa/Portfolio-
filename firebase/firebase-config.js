@@ -4,6 +4,7 @@ import {
   collection,
   addDoc,
   getDocs,
+  getDoc,        // ✅ Importado corretamente
   doc,
   deleteDoc,
   updateDoc
@@ -28,15 +29,18 @@ const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 const auth = getAuth(app); // Inicializando o Auth
 
-// Exportando o db, addDoc, collection, auth
-
+// ✅ Exportando tudo corretamente, inclusive getDoc
 export {
   db,
   collection,
   addDoc,
   deleteDoc,
   updateDoc,
-  getFirestore, 
+  getFirestore,
   doc,
-  getDocs
+  getDocs,
+  getDoc,
+  auth,
+  signInWithEmailAndPassword,
+  onAuthStateChanged
 };

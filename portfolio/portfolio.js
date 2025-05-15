@@ -13,9 +13,13 @@ document.addEventListener("DOMContentLoaded", async () => {
       card.classList.add("projeto-card");
 
       card.innerHTML = `
+      <div class="projeto">
+        <img  src="${projeto.imagem}" alt="${projeto.titulo}" />
         <h3>${projeto.titulo}</h3>
         <p>${projeto.descricao}</p>
-        <a href="${projeto.link}" target="_blank">Ver Projeto</a>
+
+        <button ><a href="${projeto.link}" target="_blank">Ver Projeto</a></button>
+      </div>
       `;
 
       portfolioContainer.appendChild(card);

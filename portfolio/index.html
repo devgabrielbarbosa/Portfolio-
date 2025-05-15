@@ -3,12 +3,21 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Gabriel Lemos, desenvolvedor front-end em transição para a área de tecnologia.">
+  <meta name="keywords" content="Gabriel Lemos, portfólio, desenvolvedor front-end, tecnologia, HTML, CSS, JavaScript, React">
+  <meta name="author" content="Gabriel Lemos">
+  <link rel="icon" href="../img/favicon.png" type="image/png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <title>Meu Portfólio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>GABRIEL LEMOS - DESENVOLVEDOR FRONT-END</h1>
+    <div class="logo">
+        <img class="img" src="../img/Imagem do WhatsApp de 2025-05-14 à(s) 16.42.29_9ac45fc9.jpg" alt="">
+        <h1>GABRIEL LEMOS - DESENVOLVEDOR FRONT-END</h1>
+    </div>
+
     <nav>
       <a href="#sobre">Sobre</a>
       <a href="#projetos">Projetos</a>
@@ -19,37 +28,65 @@
   <section id="sobre">
     <h2>Sobre Mim</h2>
     <p>
-        Olá! Me chamo [Seu Nome] e estou em transição de carreira para a área de tecnologia, com foco em desenvolvimento web. Atualmente estudo HTML, CSS, JavaScript e React, com o objetivo de conquistar minha primeira oportunidade como desenvolvedor júnior.
+        Olá! Estou em transição para a área de tecnologia, focando em desenvolvimento web. Estudo HTML, CSS, JavaScript e React para conquistar minha primeira vaga como desenvolvedor júnior.
     </p>
     <p>
-        Tenho experiência prática em projetos como sistemas de gestão e sites completos, por exemplo, um sistema de pedidos para uma padaria com painel administrativo e funcionalidades como carrinho, integração com WhatsApp e banco de dados no Firebase.
+     Tenho experiência prática em projetos como sistemas de gestão e sites completos, incluindo um sistema de pedidos para padaria com painel administrativo e integração com Firebase e WhatsApp.
+    </p>
+    <p>Participei também de um projeto integrador no SENAC Araguaína, desenvolvendo um site para uma academia, melhorando matrícula e gestão.
     </p>
     <p>
-        Além disso, já participei de um projeto integrador no SENAC Araguaína, onde desenvolvemos um site para melhorar os processos de uma academia, incluindo matrícula, gestão de equipamentos e engajamento de alunos.
-    </p>
-    <p>
-        Sou comprometido, curioso e gosto de aprender resolvendo problemas reais. Atualmente estudo à noite, após o trabalho, e estou sempre buscando melhorar minhas habilidades técnicas e de design. 
-    </p>
-    <p>
-        Estou disponível para freelas, parcerias ou oportunidades profissionais.
+        Sou dedicado, curioso e busco sempre aprender e resolver problemas reais. Estudo à noite e estou aberto a freelas, parcerias e oportunidades profissionais.
     </p>
   </section>
 
  <section id="portfolio">
-  <h2>Meus Projetos</h2>
+  <h2 id="projetos">Meus Projetos</h2>
   <div id="projetos-portfolio"></div>
 </section>
 
   <section id="contato">
     <h2>Contato</h2>
-    <form id="form-contato">
-      <input type="text" name="nome" placeholder="Seu nome" required>
-      <input type="email" name="email" placeholder="Seu e-mail" required>
-      <textarea name="mensagem" placeholder="Sua mensagem" required></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-    <p id="mensagem-enviada"></p>
+    <form
+  action="https://formspree.io/f/movdywrb"
+  method="POST"
+>
+  <label>
+    Seu E-mail:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Sua Mensagem:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Enviar</button>
+</form>
+
   </section>
+<footer class="dev-footer">
+  <div class="footer-container">
+    <div class="footer-about">
+      <h2>&lt;/Dev Portfolio&gt;</h2>
+      <p>Desenvolvedor web apaixonado por transformar ideias em código. Sempre aprendendo, sempre evoluindo.</p>
+      <p class="tech-stack">Stack atual: <span>HTML</span> • <span>CSS</span> • <span>JavaScript</span> • <span>React</span></p>
+    </div>
+
+    <div class="footer-links">
+      <h3>Conecte-se comigo</h3>
+      <ul>
+        <li><a href="https://github.com/devgabrielbarbosa" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+        <li><a href="https://www.linkedin.com/in/gabriel-lemos-383166248/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+        <li><a href="mailto:devgabriellemos@gmail.com"><i class="fas fa-envelope"></i> E-mail</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <code>// © 2025 — Portfólio de Desenvolvedor</code>
+  </div>
+</footer>
+
 
   <script type="module" src="../firebase/firebase-config.js"></script>
   <script type="module" src="./portfolio.js"></script>

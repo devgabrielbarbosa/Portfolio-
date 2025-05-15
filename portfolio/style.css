@@ -1,34 +1,247 @@
+/* Reset básico */
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0;
-  background: #f2f2f2;
-  color: #333;
+  background: #fafafa;
+  color: #444;
+  line-height: 1.6;
 }
+
+/* Cabeçalho */
 header {
-  background: #333;
-  color: white;
-  padding: 20px;
+  background: #222;
+  color: #fff;
+  padding: 1.5rem 1rem;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+a {
+  text-decoration: none;
+  color: #000000;
+} 
+
+/* Navegação */
+nav a {
+  color: #fff;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffffff;
+}
+
+/* Seção principal */
+section {
+  padding: 3rem 1rem;
+  max-width: 800px;
+  margin: 2rem auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+h2{
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #333;
   text-align: center;
 }
-nav a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
-}
-section {
-  padding: 40px;
-  max-width: 800px;
-  margin: auto;
-}
-form input, form textarea {
+
+/* Inputs e textarea */
+form input,
+form textarea {
   width: 100%;
-  padding: 10px;
+  padding: 12px 15px;
+  margin-bottom: 15px;
+  border: 1.5px solid #ccc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border-color 0.3s ease;
+  font-family: inherit;
+  resize: vertical;
+}
+
+form input:focus,
+form textarea:focus {
+  border-color: #1e90ff;
+  outline: none;
+  box-shadow: 0 0 6px #a3caff;
+}
+
+/* Botão */
+button {
+  background: #1e90ff;
+  color: #fff;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 3px 6px rgba(30,144,255,0.4);
+}
+
+button:hover {
+  background: #178bff;
+  box-shadow: 0 4px 10px rgba(16,111,204,0.6);
+  color: #fff;
+}
+.projeto {
+  gap: 20px;
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+   box-shadow: 0 4px 10px rgba(16,111,204,0.6);
+}
+
+#portfolio {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Imagens */
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+  margin: 20px 0;
+}
+
+.img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+  padding: 20px;
+  gap: 20px;
+}
+
+.dev-footer {
+  background: #0d1117;
+  color: #c9d1d9;
+  padding: 40px 20px;
+  font-family: 'Fira Code', monospace;
+  text-align: ender;
+}
+
+.footer-container {
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  max-width: 1200px;
+}
+
+
+.footer-about h2 {
+  color: #58a6ff;
   margin-bottom: 10px;
 }
-button {
-  background: #333;
-  color: white;
-  padding: 10px 20px;
-  border: none;
+
+.footer-about p {
+  margin: 8px 0;
+}
+
+.tech-stack span {
+  background: #161b22;
+  padding: 5px 8px;
+  border-radius: 4px;
+  color: #58a6ff;
+  font-size: 14px;
+  margin-right: 6px;
+}
+
+.footer-links {
+  flex: 1;
+  min-width: 200px;
+}
+
+.footer-links h3 {
+  color: #58a6ff;
+  margin-bottom: 12px;
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-links li {
+  margin: 10px 0;
+}
+
+.footer-links a {
+  color: #c9d1d9;
+ 
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #58a6ff;
+  text-decoration: underline;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 30px;
+  padding-top: 15px;
+  border-top: 1px solid #21262d;
+  color: #8b949e;
+  font-size: 14px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+  }
+  .footer-logo p {
+    margin: 10px 0 20px;
+  }
+}
+
+
+/* Responsividade simples */
+@media (max-width: 600px) {
+  section {
+    margin: 1rem;
+    padding: 2rem 1rem;
+  }
+
+  nav a {
+    margin: 0 8px;
+    font-size: 0.9rem;
+  }
+  
+.img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+h1{
+  font-size: 1rem;
+  color: #ffffff;
+  text-align: center;
+}
 }

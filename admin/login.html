@@ -14,10 +14,18 @@
 <div>
 <h2>Adicionar Projeto</h2>
   <form id="form-projeto">
-    <input type="text" id="titulo" placeholder="Título" required>
-    <textarea id="descricao" placeholder="Descrição" required></textarea>
-    <input type="url" id="link" placeholder="Link (opcional)">
-    <button type="submit">Adicionar</button>
+  <input type="text" id="titulo" placeholder="Título" required />
+  <input type="text" id="descricao" placeholder="Descrição" required />
+  <input type="url" id="link" placeholder="Link do projeto (opcional)" />
+  
+  <input type="file" id="imagem-projeto" accept="image/*" />
+  <img id="imagem-preview-projeto" src="" alt="Preview da imagem" style="display:none; max-width: 150px; margin-top: 10px;" />
+  
+  <button type="submit">Adicionar</button>
+</form>
+
+<div id="admin-projetos"></div>
+
   </form>
   <p id="mensagem"></p>
 </div>
