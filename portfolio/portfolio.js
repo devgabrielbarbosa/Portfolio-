@@ -14,11 +14,10 @@ document.addEventListener("DOMContentLoaded", async () => {
 
       card.innerHTML = `
       <div class="projeto">
-        <img  src="${projeto.imagem}" alt="${projeto.titulo}" />
+        <img src="${projeto.imagem}" alt="${projeto.titulo}" />
         <h3>${projeto.titulo}</h3>
         <p>${projeto.descricao}</p>
-
-        <button ><a href="${projeto.link}" target="_blank">Ver Projeto</a></button>
+        <button><a href="${projeto.link}" target="_blank">Ver Projeto</a></button>
       </div>
       `;
 
@@ -27,6 +26,13 @@ document.addEventListener("DOMContentLoaded", async () => {
   } catch (error) {
     console.error("Erro ao carregar projetos:", error);
   }
+
+  setupHamburguerMenu(); // Ativa o menu ao carregar a página
 });
 
+  const toggle = document.getElementById('menu-toggle');
+  const navLinks = document.getElementById('nav-links');
 
+  toggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
